@@ -1,0 +1,33 @@
+.calendar-times{
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.calendar-time{
+    height: 20px;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 12px;
+
+    &:nth-child(odd){
+        font-weight: 500;
+    }
+    &:nth-child(even){
+        opacity: .75;
+    }
+}
+
+.calendar-time + .calendar-time{
+    margin-top: 20px;
+}
+
+.calendar-time-active{
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}

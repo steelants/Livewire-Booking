@@ -1,0 +1,27 @@
+{
+    "name": "steelants/booking",
+    "description": "Livewire booking calendar",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SteelAnts\\Booking\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SteelAnts"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^11.0",
+        "livewire/livewire": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SteelAnts\\Booking\\BookingServiceProvider"
+            ]
+        }
+    }
+}

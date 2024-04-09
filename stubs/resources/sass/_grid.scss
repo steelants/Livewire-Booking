@@ -1,0 +1,21 @@
+.calendar-gridlines{
+    position: absolute;
+    top: calc(30px + .5px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.calendar-gridline{
+    width: 100%;
+    margin-top: calc($halfHour - 1px);
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 2;
+
+    &:nth-child(odd){
+        border-bottom: 1px dashed #ddd;
+    }
+}

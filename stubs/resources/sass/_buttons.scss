@@ -1,0 +1,132 @@
+.calendar-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    // outline: 2px solid white;
+    border: 1px dashed;
+    z-index: 5;
+}
+
+// .calendar-btn[title]:hover::before{
+//     content: attr(title);
+//     position: absolute;
+//     left: 50%;
+//     bottom: 100%;
+//     margin-bottom: 3px;
+//     transform: translateX(-50%);
+//     padding: 2px 4px;
+//     border-radius: 4px;
+//     font-size: 10px;
+//     background-color: rgba(0, 0, 0, .8);
+//     color: #fff;
+//     font-weight: 500;
+//     white-space: nowrap;
+//     pointer-events: none;
+//     z-index: 20;
+// }
+
+// .calendar-btn[title]:hover::after{
+//     content: '';
+//     position: absolute;
+//     left: 50%;
+//     bottom: 100%;
+//     margin-bottom: -6px;
+//     transform: translateX(-50%);
+//     border: 6px solid transparent;
+//     border-top-color: rgba(0, 0, 0, .8);
+//     z-index: 20;
+// }
+
+.booking-bg-available{
+    color: #00A864;
+    border-color: #00A864;
+    background-color: #DDF4EB;
+
+    &:hover{
+        color: #1A5090;
+        border-color: #1A5090;
+        background-color: #D6E4FA;
+    }
+}
+
+.booking-bg-partially-avilable{
+    color: #00A864;
+    border-color: #00A864;
+    background-color: hsl(157, 51%, 86%);
+    background-image: linear-gradient(-45deg,
+        rgba(255,255,255,1) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255,255,255,1) 50%,
+        rgba(255,255,255,1) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 6px 6px;
+
+    &:hover{
+        color: #1A5090;
+        background-color: #D6E4FA;
+    }
+}
+
+.booking-bg-active{
+    color: #1A5090;
+    border-color: #1A5090;
+    background-color: #D6E4FA;
+}
+
+.booking-bg-reserved{
+    color: #EE6300;
+    border-color: #EE6300;
+    background-color: #FEEADC;
+}
+
+.calendar-btn-hover{
+    .calendar-btn-text{
+        display: block;
+    }
+    .calendar-btn-text-hover{
+        display: none;
+    }
+}
+.calendar-btn-hover:hover{
+    .calendar-btn-text{
+        display: none;
+    }
+    .calendar-btn-text-hover{
+        display: block;
+    }
+}
+
+
+.calendar-area-freehand{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.calendar-btn-freehand{
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15 * $minuteSize - 4px;
+    max-height: 100%;
+    border-radius: 6px;
+    position: relative;
+    font-weight: 500;
+    // outline: 2px solid white;
+    border: 1px dashed;
+    z-index: 5;
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+}

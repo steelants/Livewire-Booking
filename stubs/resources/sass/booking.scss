@@ -1,0 +1,29 @@
+$minuteSize: 1.3333px;
+$hour: $minuteSize * 60;
+$halfHour: $minuteSize * 30;
+
+.calendar{
+    font-family: Inter;
+    width: 100%;
+    height: 600px;
+    max-height: calc(100vh - 100px);
+}
+
+.calendar-area{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+@import 'grid';
+@import 'times';
+@import 'days';
+
+@import 'items';
+@import 'buttons';
+@import 'backgrounds';
+
