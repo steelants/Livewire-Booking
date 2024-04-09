@@ -25,7 +25,7 @@ import './vendor/booking/booking.js';
 ```
 
 ## Usage
-```
+```php
 <?php
 
 namespace App\Livewire;
