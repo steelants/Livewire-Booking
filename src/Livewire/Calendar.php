@@ -29,19 +29,29 @@ class Calendar extends Component
     public array $days = [];
     public array $slots = [];
 
-    public function mount()
-    {
-        $this->renderType = 'freehand';
-        $this->dateFrom = date('Y-m-d', strtotime('today'));
-        $this->dateTo = date('Y-m-d', strtotime('+7 days'));
-        $this->selectedDay = date('Y-m-d', strtotime('today'));
+    // public function mount()
+    // {
+    //     $this->renderType = 'freehand';
+    //     $this->dateFrom = date('Y-m-d', strtotime('today'));
+    //     $this->dateTo = date('Y-m-d', strtotime('+7 days'));
+    //     $this->selectedDay = date('Y-m-d', strtotime('today'));
 
-        // required action
-        $this->init();
-    }
+    //     // required action
+    //     $this->init();
+    // }
 
     protected function init()
     {
+        if(empty($this->dateFrom)){
+            $this->dateFrom = date('Y-m-d', strtotime('today'));
+        }
+        if(empty($this->dateTo)){
+            $this->dateTo = date('Y-m-d', strtotime('+7 days'));
+        }
+        if(empty($this->selectedDay)){
+            $this->selectedDay = date('Y-m-d', strtotime('today'));
+        }
+
         $this->initTimes();
         $this->initSlots();
     }
