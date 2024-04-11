@@ -109,7 +109,7 @@ class Calendar extends Component
             $slotDateTo = date('Y-m-d H:i', $timestampTo);
             $timeFrom = date('H:i', $timestampFrom);
             $timeTo = date('H:i', $timestampTo);
-            $hour = explode(':', $timeFrom)[0];
+            list($hour, $minute) = explode(':', $timeFrom);
 
             $this->slots[$day][$slotDate] = [
                 'status' => $item['status'],
@@ -118,7 +118,7 @@ class Calendar extends Component
                 'timeTo' => $timeTo,
                 'from' => $slotDate,
                 'to' => $slotDateTo,
-                'offset' => ($hour - $this->hourFrom) * 60,
+                'offset' => ($hour - $this->hourFrom) * 60 + $minute,
                 'duration' => $this->countDuration($slotDate, $slotDateTo),
             ];
         }
