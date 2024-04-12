@@ -36,8 +36,8 @@
                                             <div class="calendar-btn-text">{{ $slot['text'] }}</div>
                                             <div class="calendar-btn-text-hover">{{ __($reserveText) }}</div>
                                         </button>
-                                    @elseif($slot['status'] == 'reserved')
-                                        <div class="calendar-btn booking-bg-reserved"
+                                    @else
+                                        <div class="calendar-btn booking-bg-{{ $slot['status'] }}"
                                             title="{{ $slot['timeFrom'] }} - {{ $slot['timeTo'] }}"
                                         >
                                             <div class="calendar-btn-text">{{ $slot['text'] }}</div>
