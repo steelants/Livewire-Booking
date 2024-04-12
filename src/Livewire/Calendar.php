@@ -84,7 +84,7 @@ class Calendar extends Component
     protected function generateDays()
     {
         $days = [];
-        for ($d = strtotime($this->dateFrom); $d < strtotime($this->dateTo); $d += (24 * 60 * 60)) {
+        for ($d = strtotime($this->dateFrom); $d <= strtotime($this->dateTo); $d += (24 * 60 * 60)) {
             $days[] = date('Y-m-d', $d);
         }
         return $days;
