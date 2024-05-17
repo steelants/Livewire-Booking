@@ -36,7 +36,7 @@
                                             class="calendar-btn booking-bg-{{ $slot['status'] }} calendar-btn-hover"
                                             title="{{ $slot['timeFrom'] }} - {{ $slot['timeTo'] }}"
                                             type="button"
-                                            wire:click="$dispatch('openModal', {{ json_encode(['livewireComponents' => $modalComponent, 'title' => __($modalTitle), 'parameters' => ['slot' => $slotKey]]) }})"
+                                            wire:click="$dispatch('openModal', {{ json_encode(['livewireComponents' => $modalComponent, 'title' => __($modalTitle), 'parameters' => ['slot' => $slot['id']]]) }})"
                                         >
                                             <div class="calendar-btn-text">{{ $slot['text'] }}</div>
                                             <div class="calendar-btn-text-hover">{{ __($reserveText) }}</div>

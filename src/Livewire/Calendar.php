@@ -112,6 +112,7 @@ class Calendar extends Component
             list($hour, $minute) = explode(':', $timeFrom);
 
             $this->slots[$day][$slotDate] = [
+                'id' => $item['id'],
                 'status' => $item['status'],
                 'text' => $item['text'],
                 'timeFrom' => $timeFrom,
